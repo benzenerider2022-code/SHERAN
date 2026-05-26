@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('compName').value;
             const complainText = document.getElementById('compMessage').value;
 
-            const myPhoneNumber = "94762368154";
+            const myPhoneNumber = "94763628154";
 
             const message = `🚨 *NEW PRIVATE COMPLAIN* 🚨\n\n*Customer Name:* ${name}\n*Complain:* ${complainText}`;
             window.open(`https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
