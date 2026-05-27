@@ -1370,3 +1370,102 @@ body.dark-theme .hr-sub-btn {
 .hr-tab-content-inner {
     animation: fadeIn 0.3s ease;
 }
+
+.video-banner-container {
+    width: 100%;
+    background-color: #fff;
+    /* සයිට් එකේ Light mode එකට ගැලපෙන්න */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    /* උඩින් සහ යටින් පොඩි ඉඩක් තැබීමට */
+}
+
+.video-banner-container video {
+    width: 95%;
+    /* දෙපැත්තෙන් පොඩි ඉඩක් තබා ලස්සන කාඩ් එකක් වගේ පෙනෙන්න */
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    /* වීඩියෝවේ කොන් හතර රවුම් කිරීමට */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* යටින් ලස්සන හෙවනැල්ලක් (Shadow) වැටෙන්න */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .video-banner-container video {
+        width: 100%;
+        border-radius: 0;
+        /* මොබයිල් ෆෝන්ස් වලදී ෆුල් ස්ක්‍රීන් පෙනෙන්න */
+        max-height: 180px;
+    }
+}
+
+/* =========================================================================
+   🎯 SWEET CORNER & INTERNAL SUB-TABS STYLING 
+   ========================================================================= */
+.sweet-corner-nav button,
+.milk-powder-sub-nav button,
+.hair-sub-nav button,
+.hygiene-sub-nav button {
+    background-color: #ffffff;
+    border: 2px solid #ff4757;
+    color: #ff4757;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark theme එකේදී බොත්තම් පෙනුම */
+body.dark-theme .sweet-corner-nav button,
+body.dark-theme .milk-powder-sub-nav button,
+body.dark-theme .hair-sub-nav button,
+body.dark-theme .hygiene-sub-nav button {
+    background-color: #1e1e1e;
+    border-color: #444444;
+    color: #dddddd;
+}
+
+/* බොත්තම Hover හෝ Active වීමේදී සිදුවන වර්ණ මාරුව */
+.sweet-corner-nav button.active,
+.sweet-corner-nav button:hover,
+.milk-powder-sub-nav button.active,
+.milk-powder-sub-nav button:hover,
+.hair-sub-nav button.active,
+.hair-sub-nav button:hover,
+.hygiene-sub-nav button.active,
+.hygiene-sub-nav button:hover {
+    background-color: #ff4757;
+    color: #ffffff;
+    border-color: #ff4757;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.2);
+}
+
+/* සිනිදු සජීවීකරණය (Smooth Tab Content Fade In Animation) */
+.s-tab-content,
+.mp-tab-content,
+.hr-tab-content-inner,
+.hy-tab-content {
+    animation: smoothTabFade 0.35s ease;
+}
+
+@keyframes smoothTabFade {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
