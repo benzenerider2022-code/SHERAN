@@ -24,7 +24,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #ff4757;
+    color: wheat;
 }
 
 nav ul {
@@ -1468,4 +1468,435 @@ body.dark-theme .hygiene-sub-nav button {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* --- මූලික සැකසුම --- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #ff4757;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* --- NAVIGATION --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a.active {
+    border-bottom: 2px solid white;
+}
+
+/* --- FOOD CONTAINER (Responsive Grid) --- */
+.food-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: stretch;
+}
+
+/* --- FOOD CARD (ලැප්ටොප් සහ ෆෝන් එකට ගැලපෙන ලෙස) --- */
+.food-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+    /* Desktop එකේදී එක පේළියට 3ක් */
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    max-width: 360px;
+}
+
+/* ෆෝන් එකේදී - පේළියට එකයි */
+@media (max-width: 768px) {
+    .food-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.food-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.food-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.price-tags {
+    margin-top: auto;
+    color: #2ed573;
+    font-weight: 700;
+}
+
+/* --- TABS & BUTTONS (කැටගරි බොත්තම්) --- */
+.grocery-categories,
+.hotfoods-categories,
+.bakery-sub-categories,
+.pantry-sub-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ddd;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button.active {
+    background: #ff4757;
+    color: white;
+}
+
+/* --- DARK MODE (අඳුරු තේමාව) --- */
+body.dark-theme {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark-theme .food-card {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-theme header {
+    background: #333;
+}
+
+/* --- FLOATING BUTTONS --- */
+.floating-whatsapp-btn,
+.floating-call-btn {
+    position: fixed;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.floating-call-btn {
+    bottom: 80px;
+    background: #007bff;
+}
+
+.floating-whatsapp-btn {
+    bottom: 20px;
+}
+
+/* --- PRICE UPDATER ANIMATION --- */
+.price-val,
+.cheese-price-val,
+.noodles-price-val,
+.salt-price-val,
+.soya-price-val,
+.powder-price-val,
+.laundry-soap-price-val,
+.bathing-soap-price-val,
+.liquid-milk-price-val,
+.milk-powder-price-val {
+    transition: opacity 0.2s ease;
+}
+
+/* ලෝගෝ එක සහ මාතෘකාව නිවැරදිව පෙනීමට */
+header {
+    background: #ff4757;
+    color: white;
+    padding: 25px 10px;
+    /* උස වැඩි කළා */
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* කාඩ්ස් වලට Modern Hover Effect */
+.food-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* සිනිදු චලනය */
+    border: 1px solid transparent;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    /* උඩට එසවීම */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    /* සෙවනැල්ල වැඩි කිරීම */
+    border-color: #ff4757;
+}
+
+/* බොත්තම් වලටත් Hover Effect */
+button,
+.nav-link,
+.category-btn {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+.hero-video-wrapper {
+    width: 100%;
+    /* පිටුවේ සම්පූර්ණ පළල */
+    height: 250px;
+    /* ඔබට අවශ්‍ය පරිදි උස වෙනස් කරන්න */
+    overflow: hidden;
+    margin-top: 10px;
+    /* Nav එකෙන් මදක් පහළට */
+    margin-bottom: 20px;
+    /* Search bar එකෙන් මදක් උඩට */
+}
+
+.hero-video {
+    width: 100%;
+    /* පළල 100% */
+    height: 100%;
+    /* උස 250px ට සමාන වේ */
+    object-fit: cover;
+    /* වීඩියෝව කපා නොගෙන පිරවීමට */
+}
+
+/* Flexbox හරහා එක පෙළට සැකසීම */
+.contact-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* ජංගම දුරකථන වලදී පහළට වැටීමට */
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-details {
+    flex: 1;
+    /* ඉඩෙන් භාගයක් ගනී */
+    min-width: 200px;
+    text-align: left;
+}
+
+.map-container {
+    flex: 1;
+    /* ඉතිරි භාගය ගනී */
+    min-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ජංගම දුරකථන සඳහා කුඩා වෙනස්කම් */
+@media (max-width: 600px) {
+    .contact-flex-container {
+        flex-direction: column;
+    }
+}
+
+.slideshow-container {
+    max-width: 800px;
+    /* පින්තූරයේ ප්‍රමාණයට ගැලපෙන ලෙස */
+    margin: 20px auto;
+    /* උඩ සහ යටින් ඉඩ තබා මැදට ගැනීම */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* වැදගත්: Slider එකට යටින් ඉඩක් ලබා දීම (Green line එකට පසුව) */
+.content-section {
+    margin-top: 30px;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Stationery Section Style */
+.stationery-nav button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stationery-nav button.active {
+    background: #2c3e50;
+}
+
+.st-tab-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* බොත්තම් මාරු කරන JavaScript එක ඔබේ Project1.js ට එකතු කරන්න */
+/* ස්ලයිඩර් හෝ ප්‍රචාරක පින්තූර සඳහා */
+.slideshow-container img,
+.mySlides img {
+    width: 100%;
+    /* පින්තූරය තිරයට ගැලපෙන ලෙස */
+    max-width: 500px;
+    /* මෙතැනින් ඔබට අවශ්‍ය උපරිම පළල වෙනස් කරන්න */
+    height: auto;
+    /* උස ස්වයංක්‍රීයව වෙනස් වේ */
+    display: block;
+    margin: 0 auto;
+    /* මැදට සැකසීම */
+    border-radius: 10px;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 400px;
+    /* මෙය පින්තූරය කුඩා කිරීමට උදව් වේ */
+    height: auto;
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.food-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.food-card:hover {
+    transform: scale(1.05);
+}
+
+.food-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-card h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.food-card p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    /* පින්තූර පිටතට යාම වැළැක්වීමට */
+}
+
+.slide-img {
+    width: 100%;
+    height: 50vh;
+    /* ඔබට අවශ්‍ය පරිදි උස වෙනස් කරන්න (උදා: 50vh යනු තිරයෙන් භාගයක්) */
+    object-fit: cover;
+    /* පින්තූරය විකෘති නොවී සම්පූර්ණ කොටසම ආවරණය වීමට */
+    display: block;
+}
+
+/* ස්ලයිඩ් එකෙන් එක මාරුවීමට අවශ්‍ය සජීවීකරණය */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.slide-img {
+    width: 100%;
+    /* තිරයේ පළලටම */
+    height: 400px;
+    /* පින්තූර සියල්ලේම උස සමාන කිරීම */
+    object-fit: cover;
+    /* පින්තූරය විකෘති නොවී අදාළ කොටස පිරවීම */
+    display: block;
+}
+
+/* ස්ලයිඩ් එකක් පසුපස එකක් එන ලෙස සකසන්න */
+.mySlides {
+    display: none;
+    /* JavaScript මගින් පසුව මෙය සක්‍රීය කරන්න */
 }
