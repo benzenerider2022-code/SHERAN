@@ -760,3 +760,7 @@ function updateKistPrice(selectElement) {
     const priceDisplay = selectElement.parentElement.parentElement.querySelector('.kist-price-val');
     priceDisplay.innerText = selectElement.value;
 }
+function updateBeediPrice(selectElement) {
+    const priceDisplay = selectElement.parentElement.parentElement.querySelector('.beedi-price-val');
+    priceDisplay.innerText = selectElement.value;
+}
