@@ -632,3 +632,131 @@ function updateClearPrice(selectElement) {
         }, 100);
     }
 }
+// --- Ice Cream Sub-Tabs Logic ---
+const icSubButtons = document.querySelectorAll('.ic-sub-btn');
+const icTabContents = document.querySelectorAll('.ic-tab-content');
+
+icSubButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        icSubButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.getAttribute('data-icsub');
+        icTabContents.forEach(t => {
+            t.style.display = (t.id === target) ? 'block' : 'none';
+        });
+    });
+});
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // තත්පර 4ක් (4000ms) පෙන්වයි
+}
+document.querySelectorAll('.st-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // සියලු buttons අක්‍රිය කරන්න
+        document.querySelectorAll('.st-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // සියලු tabs සඟවන්න
+        document.querySelectorAll('.st-tab-content').forEach(tab => tab.style.display = 'none');
+
+        // අදාළ tab එක පෙන්වන්න
+        document.getElementById(btn.getAttribute('data-stsub')).style.display = 'block';
+    });
+});
+function updateToothpastePrice(selectElement) {
+    // තෝරාගත් select box එකේ සිට එහි ළඟම ඇති price-val span එක සොයාගනී
+    let priceSpan = selectElement.parentElement.parentElement.querySelector('.tp-price-val');
+    priceSpan.innerText = selectElement.value;
+}
+function updateOralPrice(selectElement, priceClass) {
+    // තෝරාගත් select box එකේ සිට එහි ළඟම ඇති price class එක සහිත span එක සොයාගනී
+    let parent = selectElement.parentElement.parentElement;
+    let priceSpan = parent.querySelector(priceClass);
+    priceSpan.innerText = selectElement.value;
+}
+function updateOralPrice(selectElement, priceClass) {
+    let parent = selectElement.parentElement.parentElement;
+    let priceSpan = parent.querySelector(priceClass);
+    priceSpan.innerText = selectElement.value;
+}
+function updateSkinPrice(selectElement, priceClass) {
+    let parent = selectElement.parentElement;
+    let priceSpan = parent.parentElement.querySelector(priceClass);
+    priceSpan.innerText = selectElement.value;
+}
+function updateLaundryPrice(selectElement, priceClass) {
+    // තෝරාගත් select box එකේ සිට එහි ළඟම ඇති price class එක සහිත span එක සොයාගනී
+    let parent = selectElement.parentElement;
+    let priceSpan = parent.parentElement.querySelector(priceClass);
+    priceSpan.innerText = selectElement.value;
+}
+// මෙම කේතය ඔබේ බොත්තම් සඳහා තිබිය යුතුයි
+document.querySelectorAll('.st-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // සියලුම Stationery tab content සඟවන්න
+        document.querySelectorAll('.st-tab-content').forEach(tab => {
+            tab.style.display = 'none';
+        });
+
+        // අදාළ බොත්තම එබූ විට පමණක් එම tab එක පෙන්වන්න
+        const target = btn.getAttribute('data-stsub');
+        document.getElementById(target).style.display = 'block';
+    });
+});
+function updateMaggiPrice(selectElement) {
+    let parent = selectElement.parentElement;
+    let priceSpan = parent.querySelector('.maggi-price-val');
+    priceSpan.innerText = selectElement.value;
+}
+function updatePrice() {
+    // තෝරාගත් ප්‍රමාණයේ මිල ලබා ගැනීම
+    const price = document.getElementById("salmonSize").value;
+    // මිල දර්ශනය කරන span එකට අගය ඇතුළත් කිරීම
+    document.getElementById("displayPrice").innerText = price;
+}
+function updateMilkPrice() {
+    // තෝරාගත් ප්‍රමාණයේ මිල ලබා ගැනීම
+    const price = document.getElementById("milkSize").value;
+    // මිල දර්ශනය කරන span එකට අගය ඇතුළත් කිරීම
+    document.getElementById("displayMilkPrice").innerText = price;
+}
+function updateLaundryPrice() {
+    // තෝරාගත් ප්‍රමාණයේ මිල ලබා ගැනීම
+    const price = document.getElementById("laundrySize").value;
+
+    // මිල පෙන්වන span එකේ අගය යාවත්කාලීන කිරීම
+    document.getElementById("laundryPrice").innerText = price;
+}
+function updatePrice(selectElement, priceClass) {
+    // තෝරාගත් select එකේ අගය ලබා ගැනීම
+    const price = selectElement.value;
+    // අදාළ span එකේ මිල වෙනස් කිරීම
+    selectElement.parentElement.querySelector(priceClass).innerText = price;
+}
+
+// Sub-tab මාරු කිරීමේ JavaScript
+document.querySelectorAll('.hy-sub-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // සියලුම contents hide කරන්න
+        document.querySelectorAll('.hy-tab-content').forEach(content => content.style.display = 'none');
+        // අදාළ content එක පෙන්වන්න
+        document.getElementById(button.getAttribute('data-hysub')).style.display = 'block';
+
+        // Active class එක කළමනාකරණය
+        document.querySelectorAll('.hy-sub-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    });
+});
+function updateKistPrice(selectElement) {
+    const priceDisplay = selectElement.parentElement.parentElement.querySelector('.kist-price-val');
+    priceDisplay.innerText = selectElement.value;
+}
