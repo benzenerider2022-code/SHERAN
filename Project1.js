@@ -764,3 +764,40 @@ function updateBeediPrice(selectElement) {
     const priceDisplay = selectElement.parentElement.parentElement.querySelector('.beedi-price-val');
     priceDisplay.innerText = selectElement.value;
 }
+let currentIndex = 0;
+const wrapper = document.getElementById('slidesWrapper');
+const items = document.querySelectorAll('.slide-item');
+
+function autoSlide() {
+    currentIndex++;
+
+    // පින්තූර 5ම අවසන් වූ පසු නැවත මුලට ඒම
+    if (currentIndex > items.length - 4) {
+        currentIndex = 0;
+    }
+
+    const offset = -currentIndex * 25; // 25% බැගින් වමට චලනය වේ
+    wrapper.style.transform = `translateX(${offset}%)`;
+}
+
+// සෑම තත්පර 4කට වරක් ක්‍රියාත්මක වේ
+setInterval(autoSlide, 4000);
+
+// නිදසුනක් ලෙස, බොත්තම් ක්‍රියාත්මක වන ආකාරය
+const stButtons = document.querySelectorAll('.st-btn');
+const stTabs = document.querySelectorAll('.st-tab-content');
+
+stButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // සියලුම බොත්තම් වලින් 'active' class එක ඉවත් කිරීම
+        stButtons.forEach(b => b.classList.remove('active'));
+        // ක්ලික් කළ බොත්තමට 'active' class එක එකතු කිරීම
+        btn.classList.add('active');
+
+        // අදාළ Tab එක පෙන්වීම
+        const target = btn.getAttribute('data-stsub');
+        stTabs.forEach(tab => {
+            tab.style.display = tab.id === target ? 'block' : 'none';
+        });
+    });
+});
