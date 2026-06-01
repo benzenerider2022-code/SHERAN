@@ -69,15 +69,16 @@
     <header>
     </header>
 
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="Images/Discount1.jpeg" class="slide-img">
-        </div>
-        <div class="mySlides fade">
-            <img src="Images/Discount2.jpeg" class="slide-img">
-        </div>
-        <div class="mySlides fade">
-            <img src="Images/Discount3.jpeg" class="slide-img">
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <img src="Images/Discount1.jpeg" class="slide-item">
+            <img src="Images/Discount2.jpeg" class="slide-item">
+            <img src="Images/Discount3.jpeg" class="slide-item">
+            <img src="Images/Discount4.jpeg" class="slide-item">
+            <img src="Images/Discount5.jpeg" class="slide-item">
+            <img src="Images/Discount1.jpeg" class="slide-item">
+            <img src="Images/Discount2.jpeg" class="slide-item">
+            <img src="Images/Discount3.jpeg" class="slide-item">
         </div>
     </div>
 
@@ -706,7 +707,7 @@
                                         Brand:</label>
                                     <select class="rice-brand-select" onchange="updateRicePrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background-color: #f9f9f9; outline: none;">
-                                        <option value="1kg: Rs. 260 | 5kg: Rs. 1280 | 10kg: Rs. 2500" selected>Rathna
+                                        <option value="1kg: Rs. 260 | 5kg: Rs. 1280 | 10kg: Rs. 2500" selected>Weehena
                                             Kiri Samba</option>
                                         <option value="1kg: Rs. 255 | 5kg: Rs. 1250 | 10kg: Rs. 2480">Nipuna Kiri Samba
                                         </option>
@@ -714,8 +715,8 @@
                                 </div>
                                 <div class="price-tags"><span class="price-item"
                                         style="font-size: 13px; color: #2ed573; font-weight: 700; display: block; text-align: center;"><span
-                                            class="rice-price-val">1kg: Rs. 260 | 5kg: Rs. 1280 | 10kg: Rs.
-                                            2500</span></span></div>
+                                            class="rice-price-val">1kg: Rs. 230 | 5kg: Rs. 1150 | 10kg: Rs.
+                                            2300</span></span></div>
                             </div>
                         </div>
                         <div class="food-card"
@@ -731,7 +732,7 @@
                                         Brand:</label>
                                     <select class="rice-brand-select" onchange="updateRicePrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background-color: #f9f9f9; outline: none;">
-                                        <option value="1kg: Rs. 230 | 5kg: Rs. 1130 | 10kg: Rs. 2240" selected>Rathna
+                                        <option value="1kg: Rs. 230 | 5kg: Rs. 1130 | 10kg: Rs. 2240" selected>Weehena
                                             Samba</option>
                                         <option value="1kg: Rs. 225 | 5kg: Rs. 1100 | 10kg: Rs. 2200">Nipuna Samba
                                         </option>
@@ -739,8 +740,8 @@
                                 </div>
                                 <div class="price-tags"><span class="price-item"
                                         style="font-size: 13px; color: #2ed573; font-weight: 700; display: block; text-align: center;"><span
-                                            class="rice-price-val">1kg: Rs. 230 | 5kg: Rs. 1130 | 10kg: Rs.
-                                            2240</span></span></div>
+                                            class="rice-price-val">1kg: Rs. 230 | 5kg: Rs. 1150 | 10kg: Rs.
+                                            2300</span></span></div>
                             </div>
                         </div>
                         <div class="food-card"
@@ -756,7 +757,7 @@
                                         Brand:</label>
                                     <select class="rice-brand-select" onchange="updateRicePrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background-color: #f9f9f9; outline: none;">
-                                        <option value="1kg: Rs. 210 | 5kg: Rs. 1020 | 10kg: Rs. 2000" selected>Rathna
+                                        <option value="1kg: Rs. 210 | 5kg: Rs. 1020 | 10kg: Rs. 2000" selected>Weehena
                                             Nadu</option>
                                         <option value="1kg: Rs. 205 | 5kg: Rs. 1000 | 10kg: Rs. 1960">Nipuna Nadu
                                         </option>
@@ -764,8 +765,8 @@
                                 </div>
                                 <div class="price-tags"><span class="price-item"
                                         style="font-size: 13px; color: #2ed573; font-weight: 700; display: block; text-align: center;"><span
-                                            class="rice-price-val">1kg: Rs. 210 | 5kg: Rs. 1020 | 10kg: Rs.
-                                            2000</span></span></div>
+                                            class="rice-price-val">1kg: Rs. 230 | 5kg: Rs. 1150 | 10kg: Rs.
+                                            2300</span></span></div>
                             </div>
                         </div>
                     </div>
@@ -773,11 +774,17 @@
                     <div class="food-container"
                         style="display: flex; justify-content: flex-start; gap: 20px; flex-wrap: wrap; width: 100%;">
                         <div class="food-card"
-                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
-                            <div class="food-image"><img src="Images/dhal.jpg" alt="Dhal"></div>
+                            style="flex: 1; min-width: 250px; max-width: 32%; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+                            <div class="food-image"><img src="Images/dhal.jpg" alt="Dhal Varieties"
+                                    style="width:100%; border-radius: 5px;"></div>
                             <div class="food-info">
-                                <h3>Dhal (පරිප්පු 1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 270</span>
+                                <h3>Premium Dhal Selection</h3>
+                                <p>ඔබට අවශ්‍ය පරිප්පු වර්ගය තෝරන්න:</p>
+
+                                <div class="dhal-options" style="display: flex; flex-direction: column; gap: 5px;">
+                                    <div class="price-item"><strong>Cup Dhal(1kg):</strong> Rs. 470</div>
+                                    <div class="price-item"><strong>Normal Dhal(1kg):</strong> Rs. 270</div>
+                                    <div class="price-item"><strong>Watana Dhal(1kg):</strong> Rs. 215</div>
                                 </div>
                             </div>
                         </div>
@@ -786,7 +793,7 @@
                             <div class="food-image"><img src="Images/red onion.jfif" alt="Dhal"></div>
                             <div class="food-info">
                                 <h3>Red Onion (1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 270</span>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 480</span>
                                 </div>
                             </div>
                         </div>
@@ -794,8 +801,8 @@
                             style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
                             <div class="food-image"><img src="Images/halmasso.jfif" alt="Dhal"></div>
                             <div class="food-info">
-                                <h3>Halmasso(1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 270</span>
+                                <h3>Halmasso(100g)</h3>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 140</span>
                                 </div>
                             </div>
                         </div>
@@ -804,7 +811,16 @@
                             <div class="food-image"><img src="Images/big onion.jfif" alt="Green Grams"></div>
                             <div class="food-info">
                                 <h3>Big onion (1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 400</span>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 235</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="food-card"
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
+                            <div class="food-image"><img src="Images/Garlic.jfif" Green Grams"></div>
+                            <div class="food-info">
+                                <h3>Garlic (100g)</h3>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 70</span>
                                 </div>
                             </div>
                         </div>
@@ -812,8 +828,17 @@
                             style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
                             <div class="food-image"><img src="Images/green grams.webp" alt="Green Grams"></div>
                             <div class="food-info">
-                                <h3>Green Grams (මුංඇට 1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 400</span>
+                                <h3>Green Grams (මුංඇට 250g)</h3>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 250</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="food-card"
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
+                            <div class="food-image"><img src="Images/green grams.webp" alt="Green Grams"></div>
+                            <div class="food-info">
+                                <h3>Green peice(100g)</h3>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 50</span>
                                 </div>
                             </div>
                         </div>
@@ -840,7 +865,7 @@
                             <div class="food-image"><img src="Images/potato.jfif" alt="Dhal"></div>
                             <div class="food-info">
                                 <h3>Potatoes</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 270</span>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 195</span>
                                 </div>
                             </div>
                         </div>
@@ -855,7 +880,7 @@
                             <div class="food-image"><img src="Images/W sugar.jfif" alt="White Sugar"></div>
                             <div class="food-info">
                                 <h3>White Sugar (සුදු සීනි 1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 260</span>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 250</span>
                                 </div>
                             </div>
                         </div>
@@ -872,8 +897,17 @@
                             style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
                             <div class="food-image"><img src="Images/wheat F.jfif" alt="Wheat Flour"></div>
                             <div class="food-info">
-                                <h3>Prima Wheat Flour (පාන් පිටි 1kg)</h3>
-                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 240</span>
+                                <h3> Wheat Flour (පාන් පිටි 1kg)</h3>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 180</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="food-card"
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
+                            <div class="food-image"><img src="Images/wheat F.jfif" alt="Wheat Flour"></div>
+                            <div class="food-info">
+                                <h3> Roti flour(1kg)</h3>
+                                <div class="price-tags"><span class="price-item"><strong>Price:</strong> Rs. 200</span>
                                 </div>
                             </div>
                         </div>
@@ -893,13 +927,30 @@
                     <div class="food-container"
                         style="display: flex; justify-content: flex-start; gap: 20px; flex-wrap: wrap; width: 100%; align-items: stretch;">
                         <div class="food-card"
-                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
-                            <div class="food-image"><img src="Images/Coconut Oil.jpg" alt="Coconut Oil"></div>
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box; display: flex; flex-direction: column; border: 1px solid #ddd; padding: 15px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+                            <div class="food-image">
+                                <img src="Images/Coconut Oil.jpg" alt="Pure Coconut Oil"
+                                    style="width: 100%; border-radius: 8px;">
+                            </div>
+
                             <div class="food-info"
-                                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                                <h3>Pure Coconut Oil (පොල්තෙල් 1L)</h3>
-                                <div class="price-tags" style="margin-top: auto;"><span
-                                        class="price-item"><strong>Price:</strong> Rs. 650</span></div>
+                                style="display: flex; flex-direction: column; flex-grow: 1; margin-top: 15px;">
+                                <h3 style="margin: 0 0 10px 0;">Pure Coconut Oil (පොල්තෙල්)</h3>
+
+                                <!-- මිල ගණන් පෙන්වන ආකාරය -->
+                                <div class="price-options" style="display: flex; flex-direction: column; gap: 8px;">
+                                    <div class="option"
+                                        style="display: flex; justify-content: space-between; padding: 8px; background: #fdfdfd; border: 1px solid #eee; border-radius: 6px;">
+                                        <span>Premium Bottle</span>
+                                        <strong>Rs. 985</strong>
+                                    </div>
+                                    <div class="option"
+                                        style="display: flex; justify-content: space-between; padding: 8px; background: #fdfdfd; border: 1px solid #eee; border-radius: 6px;">
+                                        <span>1L Pack</span>
+                                        <strong>Rs. 900</strong>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="food-card"
@@ -907,9 +958,9 @@
                             <div class="food-image"><img src="Images/Chilli Powder.jfif" alt="Chilli Powder"></div>
                             <div class="food-info"
                                 style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                                <h3>Chilli Powder (මිරිස් කුඩු 200g)</h3>
+                                <h3>Chilli Powder (මිරිස් කුඩු 100g)</h3>
                                 <div class="price-tags" style="margin-top: auto;"><span
-                                        class="price-item"><strong>Price:</strong> Rs. 280</span></div>
+                                        class="price-item"><strong>Price:</strong> Rs. 150</span></div>
                             </div>
                         </div>
                         <div class="food-card"
@@ -930,7 +981,27 @@
                                 style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                                 <h3>Turmeric Powder (කහ කුඩු 100g)</h3>
                                 <div class="price-tags" style="margin-top: auto;"><span
-                                        class="price-item"><strong>Price:</strong> Rs. 190</span></div>
+                                        class="price-item"><strong>Price:</strong> Rs. 490</span></div>
+                            </div>
+                        </div>
+                        <div class="food-card"
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div class="food-image"><img src="Images/kali miris.jfif" alt="Turmeric Powder"></div>
+                            <div class="food-info"
+                                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                                <h3>kali miris(100g)</h3>
+                                <div class="price-tags" style="margin-top: auto;"><span
+                                        class="price-item"><strong>Price:</strong> Rs. 150</span></div>
+                            </div>
+                        </div>
+                        <div class="food-card"
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div class="food-image"><img src="Images/miris karal.jfif" alt="Turmeric Powder"></div>
+                            <div class="food-info"
+                                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                                <h3>Miris Karal(100g)</h3>
+                                <div class="price-tags" style="margin-top: auto;"><span
+                                        class="price-item"><strong>Price:</strong> Rs. 150</span></div>
                             </div>
                         </div>
                         <div class="food-card"
@@ -981,8 +1052,8 @@
 
                                 <label for="salmonSize">Select Size:</label>
                                 <select id="salmonSize" onchange="updatePrice()" style="width: 100%; margin: 10px 0;">
-                                    <option value="350">Small (Rs. 350)</option>
-                                    <option value="700">Large (Rs. 700)</option>
+                                    <option value="350">Small (Rs. 240)</option>
+                                    <option value="700">Large (Rs. 490)</option>
                                 </select>
 
                                 <div class="price-tags">
@@ -1002,8 +1073,8 @@
                                 <label for="salmonSize">Select Size:</label>
                                 <select id="salmonSize" onchange="updatePrice()" style="width: 100%; margin: 10px 0;">
                                     <option value="350">Packets (Rs. 50)</option>
-                                    <option value="350">Small (Rs. 350)</option>
-                                    <option value="700">Large (Rs. 700)</option>
+                                    <option value="350">Small (Rs. 290)</option>
+                                    <option value="700">Large (Rs. 490)</option>
                                 </select>
 
                                 <div class="price-tags">
@@ -1195,9 +1266,9 @@
                                         Size:</label>
                                     <select class="bev-size-select" onchange="updateBeveragePrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background: #f9f9f9;">
-                                        <option value="Rs. 100" selected>Buddy - Rs. 100</option>
-                                        <option value="Rs. 180">Small - Rs. 180</option>
-                                        <option value="Rs. 270">Large - Rs. 270</option>
+                                        <option value="Rs. 100" selected>Buddy(250mL) - Rs. 120</option>
+                                        <option value="Rs. 180">Small(1L) - Rs. 300</option>
+                                        <option value="Rs. 270">Large(1.5L) - Rs. 420</option>
                                     </select>
                                 </div>
                                 <div class="price-tags"><span class="price-item"
@@ -1258,9 +1329,8 @@
                                         Size:</label>
                                     <select class="bev-size-select" onchange="updateBeveragePrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background: #f9f9f9;">
-                                        <option value="Rs. 100" selected>Buddy - Rs. 100</option>
-                                        <option value="Rs. 180">Small - Rs. 180</option>
-                                        <option value="Rs. 270">Large - Rs. 270</option>
+
+                                        <option value="Rs. 270">Large - Rs. 230</option>
                                     </select>
                                 </div>
                                 <div class="price-tags"><span class="price-item"
@@ -1324,6 +1394,27 @@
                         </div>
                         <div class="food-card"
                             style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
+                            <div class="food-image"><img src="Images/Lemonade.jfif" alt="Sprite"></div>
+                            <div class="food-info">
+                                <h3>Lemonade</h3>
+                                <div class="size-selector-box" style="margin: 12px 0; text-align: left;">
+                                    <label
+                                        style="font-size: 13px; color: #777; display: block; margin-bottom: 5px;">Select
+                                        Size:</label>
+                                    <select class="bev-size-select" onchange="updateBeveragePrice(this)"
+                                        style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background: #f9f9f9;">
+                                        <option value="Rs. 100" selected>Buddy - Rs. 100</option>
+                                        <option value="Rs. 180">Small - Rs. 180</option>
+                                        <option value="Rs. 270">Large - Rs. 270</option>
+                                    </select>
+                                </div>
+                                <div class="price-tags"><span class="price-item"
+                                        style="font-size: 16px; color: #2ed573; font-weight: 700;"><strong>Price:</strong>
+                                        <span class="bev-price-val">Rs. 100</span></span></div>
+                            </div>
+                        </div>
+                        <div class="food-card"
+                            style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
                             <div class="food-image"><img src="Images/Necto.jfif" alt="Sprite"></div>
                             <div class="food-info">
                                 <h3>Necto</h3>
@@ -1354,9 +1445,10 @@
                                         Size:</label>
                                     <select class="bev-size-select" onchange="updateBeveragePrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-weight: 600; cursor: pointer; background: #f9f9f9;">
-                                        <option value="Rs. 100" selected>Buddy - Rs. 100</option>
-                                        <option value="Rs. 180">Small - Rs. 180</option>
-                                        <option value="Rs. 270">Large - Rs. 270</option>
+                                        <option value="Rs. 100" selected>250mL - Rs. 120</option>
+                                        <option value="Rs. 180">500mL - Rs. 200</option>
+                                        <option value="Rs. 270">1L - Rs. 320</option>
+                                        <option value="Rs. 270">1.5L - Rs. 420</option>
                                     </select>
                                 </div>
                                 <div class="price-tags"><span class="price-item"
@@ -1523,13 +1615,13 @@
                 <h3 class="sub-title">Dairy Products (කිරි නිෂ්පාදන)</h3>
                 <div class="dairy-sub-categories">
                     <button class="d-sub-btn active" data-dsub="milk-powders">Milk & Powders</button>
-                    <button class="d-sub-btn" data-dsub="fermented">Yogurt,Butter & curd/button>
+                    <button class="d-sub-btn" data-dsub="fermented">Yogurt,Butter & curd</button>
                 </div>
 
                 <div id="milk-powders" class="d-tab-content active">
                     <div class="milk-powder-sub-nav"
                         style="display: flex; gap: 10px; margin-bottom: 20px; justify-content: center;">
-                        <button class="mp-sub-btn active" data-mpsub="dairy-milk-tab">Liquid Milk</button>
+                        <button class="mp-sub-btn active" data-mpsub="dairy-milk-tab">Fresh Milk</button>
                         <button class="mp-sub-btn" data-mpsub="dairy-powder-tab">Milk Powder</button>
                     </div>
                     <div id="dairy-milk-tab" class="mp-tab-content" style="display: block;">
@@ -1581,8 +1673,8 @@
                                 </select>
                                 <label>Select Size:</label>
                                 <select class="sustagen-size" style="width: 100%;">
-                                    <option value="1200">Small - Rs. 1200</option>
-                                    <option value="2400">Large - Rs. 2400</option>
+                                    <option value="1200">Small - Rs. 3000</option>
+                                    <option value="2400">Large - Rs. 3200</option>
                                 </select>
                             </div>
                             <div class="food-card"
@@ -1597,8 +1689,8 @@
                                 </select>
                                 <label>Select Size:</label>
                                 <select style="width: 100%;">
-                                    <option value="700">Small - Rs. 700</option>
-                                    <option value="1400">Large - Rs. 1400</option>
+                                    <option value="700">Small - Rs. 2000</option>
+                                    <option value="1400">Large - Rs. 2400</option>
                                 </select>
                             </div>
                             <div class="food-card"
@@ -1613,7 +1705,7 @@
                                 </select>
                                 <label>Select Size:</label>
                                 <select style="width: 100%;">
-                                    <option value="900">Small - Rs. 900</option>
+                                    <option value="900">Small - Rs. 1750</option>
                                     <option value="1800">Large - Rs. 1800</option>
                                 </select>
                             </div>
@@ -1720,7 +1812,7 @@
                                     <option value="Rs. 560" selected>Sunlight - Rs. 560</option>
                                     <option value="Rs. 480">Diva - Rs. 480</option>
                                     <option value="Rs. 750">Surf Excel - Rs. 750</option>
-                                    <option value="Rs. 520">Delmalight - Rs. 520</option>
+                                    <option value="Rs. 520">Delmalight - Rs. 100</option>
                                 </select>
                                 <p>Price: <span class="wp-price-val">Rs. 560</span></p>
                             </div>
@@ -1737,7 +1829,7 @@
                                     style="width: 100%; padding: 8px; margin-top: 5px;">
                                     <option value="Rs. 150" selected>Sunlight - Rs. 150</option>
                                     <option value="Rs. 140">Diva Soap - Rs. 140</option>
-                                    <option value="Rs. 160">Delmalight - Rs. 160</option>
+                                    <option value="Rs. 160">Delmalight - Rs. 100</option>
                                 </select>
                                 <p>Price: <span class="ls-price-val">Rs. 150</span></p>
                             </div>
@@ -1762,8 +1854,8 @@
                                 <label style="display:block; margin-top:10px;">Select Size:</label>
                                 <select id="laundrySize" onchange="updateLaundryPrice()"
                                     style="width: 100%; padding: 8px; margin-top: 5px;">
-                                    <option value="400">Small (Rs. 400)</option>
-                                    <option value="800">Large (Rs. 800)</option>
+                                    <option value="400">Small (Rs. 310)</option>
+                                    <option value="800">Large (Rs. 1200)</option>
                                 </select>
 
                                 <p>Price: Rs. <span id="laundryPrice">400</span></p>
@@ -1793,6 +1885,8 @@
                                 <select onchange="updatePrice(this, '.tp-price')">
                                     <option value="290">Signal - Rs. 290</option>
                                     <option value="250">Clogard - Rs. 250</option>
+                                    <option value="250">Close up - Rs. 375</option>
+                                    <option value="250">Supiriwiki - Rs. 240</option>
                                 </select>
                                 <p>Price: Rs. <span class="tp-price">290</span></p>
                             </div>
@@ -1830,6 +1924,9 @@
                                 <select onchange="updatePrice(this, '.soap-price')">
                                     <option value="160">Dettol - Rs. 160</option>
                                     <option value="140">Lifebuoy - Rs. 140</option>
+                                    <option value="140">Calin - Rs. 135</option>
+                                    <option value="140">Ayush - Rs. 140</option>
+                                    <option value="140">Pears - Rs. 135</option>
                                 </select>
                                 <p>Price: Rs. <span class="soap-price">160</span></p>
                             </div>
@@ -1898,7 +1995,7 @@
                             <h3>Razors</h3>
                             <select onchange="updatePrice(this, '.rz-price')">
                                 <option value="150">Gillette - Rs. 150</option>
-                                <option value="200">Dorco - Rs. 200</option>
+                                <option value="200">Dorco - Rs. 150</option>
                             </select>
                             <p>Price: Rs. <span class="rz-price">150</span></p>
                         </div>
@@ -1947,7 +2044,7 @@
                             style="flex: 1; min-width: 250px; max-width: 32%; box-sizing: border-box;">
                             <div class="food-image"><img src="Images/Broom.jfif" alt="Broom"></div>
                             <div class="food-info">
-                                <h3>Coir Broom (කොහු කොස්ස)</h3>
+                                <h3>Coir Broom</h3>
                                 <div class="price-tags"><span class="price-item">Price: Rs. 220</span></div>
                             </div>
                         </div>
@@ -2037,8 +2134,8 @@
                                         Size:</label>
                                     <select class="beedi-size-select" onchange="updateBeediPrice(this)"
                                         style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; cursor: pointer;">
-                                        <option value="10" selected>Small - Rs. 10</option>
-                                        <option value="50">Big - Rs. 50</option>
+                                        <option value="10" selected>Small - Rs. 13</option>
+                                        <option value="50">Big - Rs. 15</option>
                                     </select>
                                 </div>
 
@@ -2072,7 +2169,7 @@
                         <div class="food-card">
                             <h3>Atlas / Rathna Books</h3>
                             <select>
-                                <option>40 Pages</option>
+                                <option>40 Pages </option>
                                 <option>80 Pages</option>
                                 <option>120 Pages</option>
                                 <option>160 Pages</option>
@@ -2094,7 +2191,7 @@
                             <h3>Pens (පෑන්)</h3>
                             <p><strong>Brands:</strong> Mango, Max, Bic</p>
                             <p><strong>Colors:</strong> Blue, Black, Red</p>
-                            <p><strong>Price:</strong> Rs. 40 - 80</p>
+                            <p><strong>Price:</strong> Rs. 25</p>
                         </div>
 
                         <div class="food-card"
@@ -2118,7 +2215,7 @@
                             <h3>Glues (මැලියම්)</h3>
                             <p><strong>Brands:</strong> UHU, Crystal, Stick Glue</p>
                             <p><strong>Sizes:</strong> Small, Normal, Big</p>
-                            <p><strong>Price:</strong> Rs. 50 - 250</p>
+                            <p><strong>Price:</strong> Rs. 120</p>
                         </div>
 
                         <div class="food-card"
@@ -2143,7 +2240,7 @@
                             <h3>Pencils (පැන්සල්)</h3>
                             <p><strong>Brands:</strong> Faber-Castell, Doms</p>
                             <p><strong>Types:</strong> HB, 2B, Woodless</p>
-                            <p><strong>Price:</strong> Rs. 20 - 60</p>
+                            <p><strong>Price:</strong> Rs. 30</p>
                         </div>
 
                         <div class="food-card"
@@ -2152,7 +2249,7 @@
                             <h3>Sharpeners (මුවහත් කරන)</h3>
                             <p><strong>Brands:</strong> Faber-Castell, Doms</p>
                             <p><strong>Types:</strong> Single hole, Metal, Container type</p>
-                            <p><strong>Price:</strong> Rs. 25 - 80</p>
+                            <p><strong>Price:</strong> Rs. 30</p>
                         </div>
 
                         <div class="food-card"
@@ -2161,7 +2258,7 @@
                             <h3>Erasers (මකන)</h3>
                             <p><strong>Brands:</strong> Faber-Castell, Doms</p>
                             <p><strong>Types:</strong> Soft, Dust-free, Fancy shapes</p>
-                            <p><strong>Price:</strong> Rs. 20 - 100</p>
+                            <p><strong>Price:</strong> Rs. 40</p>
                         </div>
 
                     </div>
@@ -2174,7 +2271,7 @@
                         <div class="food-card">
                             <h3>A4 Papers & Brown Papers</h3>
                             <p>Single Sheets & Packs</p>
-                            <p><strong>Price:</strong> Rs. 5 - 1500</p>
+                            <p><strong>Price:</strong> Rs. 5</p>
                         </div>
                     </div>
                 </div>
@@ -2202,10 +2299,11 @@
                     <h3>📍 අපව සොයාගන්න</h3>
 
                     <div class="contact-flex-container">
-                        <!-- වම් පස තොරතුරු -->
+
                         <div class="contact-details">
-                            <p><strong>ලිපිනය:</strong><br> Sheran Super and Bakers, කැලෑලිය (Kaleliya).</p>
-                            <p><strong>දුරකථන:</strong><br> 07XXXXXXXX</p>
+                            <p><strong>ලිපිනය:</strong><br> Sheran Super and Bakers,Kaleliya.</p>
+                            <p><strong>දුරකථන:</strong><br> 0757703825</p>
+                            <p><strong>Telephoone දුරකථන:</strong><br> 0334550069 </p>
                         </div>
 
                         <!-- දකුණු පස Map එක -->
