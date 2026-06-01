@@ -1924,3 +1924,12 @@ button:hover {
     margin-bottom: 5px;
     font-size: 0.9em;
 }
+/* ටැබ්ලට් සඳහා (තිරයේ පළල 768px හෝ ඊට අඩු නම්) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%; /* මූලද්‍රව්‍යය සම්පූර්ණයෙන්ම දිග හැරේ */
+    }
+    .main-content {
+        flex-direction: column; /* තීරු දෙකක් එක උඩ එක වැටෙන පරිදි සකසයි */
+    }
+}
