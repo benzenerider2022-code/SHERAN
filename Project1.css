@@ -1854,49 +1854,73 @@ button:hover {
 
 .slideshow-container {
     width: 100%;
-    position: relative;
-    margin: 0;
     overflow: hidden;
-    /* පින්තූර පිටතට යාම වැළැක්වීමට */
+    /* අතිරික්ත පින්තූර සැඟවීමට */
+    position: relative;
 }
 
-.slide-img {
-    width: 100%;
-    height: 50vh;
-    /* ඔබට අවශ්‍ය පරිදි උස වෙනස් කරන්න (උදා: 50vh යනු තිරයෙන් භාගයක්) */
+.slideshow-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* සිනිඳු චලනයක් සඳහා */
+}
+
+.slide-item {
+    min-width: 60%;
+    /* පින්තූර 4ක් පෙන්වීමට 25% (100/4) */
+    height: 500px;
     object-fit: cover;
-    /* පින්තූරය විකෘති නොවී සම්පූර්ණ කොටසම ආවරණය වීමට */
-    display: block;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
-/* ස්ලයිඩ් එකෙන් එක මාරුවීමට අවශ්‍ය සජීවීකරණය */
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    /* පිටත පින්තූර සැඟවීමට */
+    padding: 10px 0;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    /* පින්තූර අතර පරතරය */
+    animation: scroll 15s linear infinite;
+    /* 15s දී වටයක් ගමන් කරයි */
+}
+
+.slide-item {
+    min-width: 24.5%;
+    /* මෙහි height අගය වැඩි කරන්න. 
+       ඔබේ රෝස ඉර පවතින ස්ථානයට අනුව 300px සිට 350px දක්වා උත්සාහ කර බලන්න. */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
 
-    to {
-        opacity: 1
+    100% {
+        transform: translateX(-80%);
     }
+
+    /* පින්තූර ප්‍රමාණය අනුව මෙය වෙනස් කළ හැක */
 }
 
-.slide-img {
-    width: 100%;
-    /* තිරයේ පළලටම */
-    height: 400px;
-    /* පින්තූර සියල්ලේම උස සමාන කිරීම */
-    object-fit: cover;
-    /* පින්තූරය විකෘති නොවී අදාළ කොටස පිරවීම */
-    display: block;
+.slide-item:hover {
+    transform: scale(1.02);
 }
 
-/* ස්ලයිඩ් එකක් පසුපස එකක් එන ලෙස සකසන්න */
-.mySlides {
-    display: none;
-    /* JavaScript මගින් පසුව මෙය සක්‍රීය කරන්න */
+.price-item {
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #28a745;
+    /* කොළ පැහැති තීරුවක් */
+    margin-bottom: 5px;
+    font-size: 0.9em;
 }
