@@ -16,7 +16,7 @@ A modern, fully responsive static website designed for a grocery and bakery busi
 
 ## 📦 How to Run the Project
 1. Clone this repository to your local machine:
-   `git clone https://github.com/your-username/your-repository-name.git`
+   `git clone https://github.com/BENZENERIDER2022/SHERAN.git`
 2. Open `index.html` in your favorite web browser.
 
 ## 📱 Live Demo
@@ -27,6 +27,6 @@ https://benzenerider2022-code.github.io/SHERAN/
 Hello! I am **Rashmika**, an Electrical and Telecommunication Engineering undergraduate at the South Eastern University of Sri Lanka (SEUSL). I am passionate about web development and building valuable digital solutions.
 
 ## ✉️ Contact
-- **Email:** [Your Email Address]
-- **GitHub:** [Link to your GitHub profile]
-- **LinkedIn:** [Link to your LinkedIn profile]
+- **Email:** Benzenerider2022@gmail.com
+- **GitHub:** https://benzenerider2022-code.github.io/SHERAN/
+- **LinkedIn:** https://www.linkedin.com/in/rashmika-pinsara-9907b53b0/
