@@ -83,7 +83,7 @@ nav ul li a.active {
     border: none;
     outline: none;
     color: white;
-    width: 45px;
+    width: 60px;
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
@@ -100,10 +100,14 @@ nav ul li a.active {
     box-shadow: 0 6px 20px rgba(255, 71, 87, 0.15);
 }
 
-.search-btn:hover {
-    background: #e03444;
-    transform: scale(1.05);
+.search-btn svg {
+    width: 25px;
+    /* අයිකනයේ ප්‍රමාණය වැඩි කිරීමට මෙය වෙනස් කරන්න */
+    height: 25px;
+    stroke-width: 3px;
+    /* රේඛාවල ඝනකම වැඩි කිරීමට */
 }
+
 
 /* Suggestions List */
 .suggestions-list {
@@ -117,7 +121,8 @@ nav ul li a.active {
     padding: 0;
     list-style: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    max-height: 300px;
+    overflow-y: auto;
     display: none;
     z-index: 10;
 }
